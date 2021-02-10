@@ -14,8 +14,8 @@ class TreeNode:
         self.right = right
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
-        if not len(nums) % 2:
-            nums.append( None )
+        if len(nums) == 0:
+            return None
         return self.subRoutine(nums)
 
     def subRoutine(self, nums: List[int]) -> TreeNode:
@@ -24,7 +24,7 @@ class Solution:
         if len(nums) > 1:
             root.left = self.subRoutine(nums[:medianIndex])
             if len(nums) > 2:
-                root.right = self.subRoutine(nums[medianIndex:])
+                root.right = self.subRoutine(nums[medianIndex+1:])
         return root
 # @lc code=end
 
