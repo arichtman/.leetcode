@@ -12,11 +12,3 @@ class Solution:
         return False
         
 # @lc code=end
-
-s = 'a'
-t = 'b'
-
-s = "anagram"
-t = "nagaram"
-list(s).sort()
-list(t).sort()
